@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Silverstone_Whatsappshare>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Silverstone_Whatsappshare>
+    </modules>
+</config>

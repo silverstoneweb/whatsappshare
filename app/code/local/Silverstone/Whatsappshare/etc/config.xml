@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+        <Silverstone_Whatsappshare>
+            <version>1.0.0</version>
+        </Silverstone_Whatsappshare>
+    </modules>
+	<frontend>		
+		<routers>
+	        <whatsappshare>
+	            <use>standard</use>
+	            <args>
+	                <module>Silverstone_Whatsappshare</module>
+	                <frontName>whatsappshare</frontName>
+	            </args>
+	        </whatsappshare>
+	    </routers>	
+	    <layout>
+	    	<updates>
+	    		<whatsappshare>
+	    			<file>whatsappshare.xml</file>
+	    		</whatsappshare>
+	    	</updates>
+	    </layout>
+	</frontend>
+	<adminhtml>
+	    <acl>
+	        <resources>
+	            <all>
+	                <title>Allow Everything</title>
+	            </all>
+	            <admin>
+	                <children>
+	                    <system>
+	                        <children>
+	                            <config>
+	                                <children>
+	                                    <whatsappshare>
+	                                        <title>WhatsApp Share</title>
+	                                    </whatsappshare>
+	                                </children>
+	                            </config>
+	                        </children>
+	                    </system>
+	                </children>
+	            </admin>
+	        </resources>
+	    </acl>
+	</adminhtml>
+	<global>
+		<helpers>
+            <whatsappshare>
+                <class>Silverstone_Whatsappshare_Helper</class>
+            </whatsappshare>
+        </helpers>
+	</global>
+</config>
